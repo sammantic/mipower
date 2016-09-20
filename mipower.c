@@ -24,20 +24,20 @@ void ac_message(void) {
 	int ret;
 
 	myps = power_supply_get_by_name(name);
-	ret = myps->get_property(myps,POWER_SUPPLY_PROP_ONLINE,&status);
+	ret = myps->desc->get_property(myps,POWER_SUPPLY_PROP_ONLINE,&status);
 
 	if (status.intval == 0) 
 		msg = "Power down";
 
-	pr_info("[ mipower ]Power supplay name : %s\n",myps->name);
-	pr_info("[ mipower ]Status : %s \n", msg);
+	pr_info("[ mipower ] Power supplay name : %s\n",myps->desc->name);
+	pr_info("[ mipower ] Status : %s \n", msg);
 
 }
 
 
 static int my_notifier_call(struct notifier_block *b, unsigned long event, void *data)
 {
-	pr_info("[ mipower ]RECEIVING MSG...\n");
+	pr_info("[ mipower ] RECEIVING MSG...\n");
 		
 	switch (event) {
 	case PSY_EVENT_PROP_CHANGED:
