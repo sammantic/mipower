@@ -1,7 +1,7 @@
 # mipower
 Kernel module tracking power supply cable "AC"
 
-###Installation
+### Installation
 Open terminal and run these commands.
 
 -Compile the kernel module 
@@ -14,7 +14,7 @@ $ make
 ```sh
 $ sudo insmod mipower.ko
 ```
-###Usage
+### Usage
 
 ```sh
 $ dmesg
