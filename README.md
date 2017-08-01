@@ -1,5 +1,5 @@
 # mipower
-Kernel module tracking cable power supply "AC"
+Kernel module tracking power supply cable "AC"
 
 ###Installation
 Open terminal and run these commands.
